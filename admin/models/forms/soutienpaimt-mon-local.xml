@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details"
+		addfieldpath="/administrator/components/com_soutiens/models/fields"
+>
+		<field name="id" type="text" default="0"
+			readonly="true" class="readonly"
+			label="JGLOBAL_FIELD_ID_LABEL" 	description ="JGLOBAL_FIELD_ID_DESC" />
+	
+		<field
+			class="inputbox"
+			label="COM_SOUTIENS_FORM_LBL_SOUTIENPAIMT_DATESAISIE"
+			description="COM_SOUTIENS_FORM_LBL_SOUTIENPAIMT_DATESAISIE" 
+			name="datesaisie"
+			format="%Y-%m-%d"
+			type="calendar"
+			size="22"
+		/>
+		
+		<field name="name" type="text" class="inputbox"
+			size="40" label="COM_SOUTIENS_FORM_LBL_SOUTIENPAIMT_NAME"
+			description="COM_SOUTIENS_FORM_DESC_SOUTIENPAIMT_NAME" required="true" />
+	
+		<field name="alias" type="text" label="JFIELD_ALIAS_LABEL"
+			description="JFIELD_ALIAS_DESC" class="inputbox" size="45" labelclass="control-label" />
+
+		<field name="firstname" type="text" class="inputbox"
+			size="40" label="COM_SOUTIENS_FORM_LBL_SOUTIENPAIMT_FIRSTNAME"
+			description="COM_SOUTIENS_FORM_DESC_SOUTIENPAIMT_FIRSTNAME" required="true" />
+
+
+		<field
+			class="inputbox"
+			label="COM_SOUTIENS_FORM_LBL_SOUTIENPAIMT_RAISONSOC"
+			description="COM_SOUTIENS_FORM_DESC_SOUTIENPAIMT_RAISONSOC" 
+			name="raisonsoc"
+			size="40"
+			type="text"
+		/>
+		
+		
+		<field name="civilite" type="radio" default="M" label="COM_SOUTIENS_FORM_LBL_SOUTIENPAIMT_CIVILITE" description="COM_SOUTIENS_FORM_DESC_SOUTIENPAIMT_CIVILITE">
+ 			<option value="M">
+				COM_SOUTIENS_FIELD_CIVIL_MONSIEUR</option>
+			<option value="MME">
+				COM_SOUTIENS_FIELD_CIVIL_MADAME</option>
+			<option value="MMME">
+				COM_SOUTIENS_FIELD_CIVIL_MMME</option>
+			<option value="MLLE">
+				COM_SOUTIENS_FIELD_CIVIL_MADEMOISELLE</option>
+		</field>
+		
+
+		<field
+			class="inputbox"
+			label="COM_SOUTIENS_FORM_LBL_SOUTIENPAIMT_EMAIL"
+			description="COM_SOUTIENS_FORM_DESC_SOUTIENPAIMT_EMAIL" 
+			name="email"
+			required="true"
+			size="40"
+			type="text"
+		/>
+		<field
+			class="inputbox"
+			label="COM_SOUTIENS_FORM_LBL_SOUTIENPAIMT_ADDRESS"
+			description="COM_SOUTIENS_FORM_DESC_SOUTIENPAIMT_ADDRESS" 
+			name="address"
+			rows="10"
+			cols="5"
+			type="textarea"
+		/>
+		<field
+			class="inputbox"
+			label="COM_SOUTIENS_FORM_LBL_SOUTIENPAIMT_CPTADDRESS"
+			description="COM_SOUTIENS_FORM_DESC_SOUTIENPAIMT_CPTADDRESS" 
+			name="cptaddress"
+			size="40"
+			type="text"
+		/>
+		<field
+			class="inputbox"
+			label="COM_SOUTIENS_FORM_LBL_SOUTIENPAIMT_ZIPCODE"
+			description="COM_SOUTIENS_FORM_DESC_SOUTIENPAIMT_ZIPCODE" 
+			name="zipcode"
+			size="40"
+			type="text"
+		/>
+		<field
+			class="inputbox"
+			label="COM_SOUTIENS_FORM_LBL_SOUTIENPAIMT_CITY"
+			description="COM_SOUTIENS_FORM_DESC_SOUTIENPAIMT_CITY" 
+			name="city"
+			size="40"
+			type="text"
+		/>
+		
+		<field name="country" type="sql" default="65" label="COM_SOUTIENS_FORM_LBL_SOUTIENPAIMT_COUNTRY" description="COM_SOUTIENS_FORM_DESC_SOUTIENPAIMT_COUNTRY" query="SELECT id AS value, country FROM #__soutiens_pays" />
+		
+		
+		<field
+			class="inputbox"
+			label="COM_SOUTIENS_FIELD_PHONE_LABEL"
+			description="COM_SOUTIENS_FIELD_PHONE_DESC" 
+			name="phone"
+			size="40"
+			type="text"
+		/>
+		<field
+			class="inputbox"
+			label="COM_SOUTIENS_FIELD_NAISS_LABEL"
+			description="COM_SOUTIENS_FIELD_NAISS_DESC" 
+			name="an_naiss"
+			size="40"
+			type="text"
+		/>
+		
+		<field name="dioc" type="list" default="" label="COM_SOUTIENS_FIELD_PAROIS_LABEL"
+			description="COM_SOUTIENS_FIELD_PAROIS_DESC" 
+>
+		<option value="Paris">Paris (75)</option>
+		<option value="Meaux">Meaux (77)</option>
+		<option value="Versailles">Versailles (78)</option>
+		<option value="Evry">Evry (91)</option>
+		<option value="Nanterre">Nanterre (92)</option>
+		<option value="Saint-Denis">Saint-Denis (93)</option>
+		<option value="Créteil">Créteil (94)</option>
+		<option value="Pontoise">Pontoise (95)</option>
+		</field>
+		
+		<field
+			class="inputbox"
+			label="COM_SOUTIENS_FIELD_PAROIS_LABEL"
+			description="COM_SOUTIENS_FIELD_PAROIS_DESC" 
+			name="parois"
+			size="40"
+			type="text"
+		/>
+		<field
+			class="inputbox"
+			label="COM_SOUTIENS_FORM_LBL_SOUTIENPAIMT_MESSAGE"
+			description="COM_SOUTIENS_FORM_DESC_SOUTIENPAIMT_MESSAGE" 
+			name="message"
+			rows="10"
+			cols="5"
+			type="textarea"
+		/>
+		
+	</fieldset>
+
+	<fieldset name="soutientransac"
+		label="COM_SOUTIENS_LABEL_TRANSAC_DETAILS"
+	>
+		<field
+			class="inputbox"
+			label="COM_SOUTIENS_FORM_LBL_SOUTIENPAIMT_MONTANT"
+			description="COM_SOUTIENS_FORM_DESC_SOUTIENPAIMT_MONTANT" 
+			name="montant"
+			size="40"
+			type="text"
+		/>
+		<field name="paimode" type="radio" default="1" label="COM_SOUTIENS_FORM_LBL_SOUTIENPAIMT_PAIMODE" description="COM_SOUTIENS_FORM_DESC_SOUTIENPAIMT_PAIMODE" required="true">
+ 			<option value="1">
+				COM_SOUTIENS_FIELD_PAIMODECB</option>
+			<option value="2">
+				COM_SOUTIENS_FIELD_PAIMODECHQ</option>
+			<option value="3">
+				COM_SOUTIENS_FIELD_PAIMODEPREVMOIS</option>
+			<option value="4">
+				COM_SOUTIENS_FIELD_PAIMODEPREVTRIM</option>
+		</field>
+		
+		<field
+			class="inputbox"
+			label="COM_SOUTIENS_FORM_LBL_SOUTIENPAIMT_TRANSACDONID"
+			description="COM_SOUTIENS_FORM_DESC_SOUTIENPAIMT_TRANSACDONID" 
+			name="transacdonid"
+			size="40"
+			type="text"
+		/>
+		<field
+			class="inputbox"
+			label="COM_SOUTIENS_FORM_LBL_SOUTIENPAIMT_NUMTRANSACTION"
+			description="COM_SOUTIENS_FORM_DESC_SOUTIENPAIMT_NUMTRANSACTION" 
+			name="numtransaction"
+			size="40"
+			type="text"
+		/>
+		<field
+			class="inputbox"
+			label="COM_SOUTIENS_FORM_LBL_SOUTIENPAIMT_CODERESPONSE"
+			description="COM_SOUTIENS_FORM_DESC_SOUTIENPAIMT_CODERESPONSE" 
+			name="coderesponse"
+			size="40"
+			type="text"
+		/>
+		<field
+			class="inputbox"
+			label="COM_SOUTIENS_FORM_LBL_SOUTIENPAIMT_TXTRESPONSE"
+			description="COM_SOUTIENS_FORM_DESC_SOUTIENPAIMT_TXTRESPONSE" 
+			name="txtresponse"
+			size="40"
+			type="text"
+		/>
+		<field
+			class="inputbox"
+			label="COM_SOUTIENS_FORM_LBL_SOUTIENPAIMT_ENCAISSEMENT"
+			description="COM_SOUTIENS_FORM_DESC_SOUTIENPAIMT_ENCAISSEMENT" 
+			name="encaissement"
+			size="40"
+			type="text"
+		/>
+	</fieldset>
+
+	<fieldset name="soutiendetails"
+		label="COM_SOUTIENS_GROUP_LABEL_BANNER_DETAILS"
+	>
+		<field
+			class="inputbox"
+			label="COM_SOUTIENS_FIELD_COMENTP_LABEL"
+			description="COM_SOUTIENS_FIELD_COMENTP_DESC" 
+			name="commentpaimnt"
+			size="40"
+			type="textarea"
+		/>
+		<field
+			class="readonly"
+			readonly="true"
+			label="COM_SOUTIENS_FORM_LBL_SOUTIENPAIMT_ADIP"
+			description="COM_SOUTIENS_FORM_DESC_SOUTIENPAIMT_ADIP" 
+			name="adip"
+			size="40"
+			type="text"
+		/>
+		<field
+			class="inputbox"
+			label="COM_SOUTIENS_FORM_LBL_SOUTIENPAIMT_REFERRERS"
+			description="COM_SOUTIENS_FORM_DESC_SOUTIENPAIMT_REFERRERS" 
+			name="referrers"
+			size="40"
+			type="text"
+		/>
+		
+		<field name="published" type="list" label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC" class="span12 small"
+			filter="intval" size="1" default="1"
+		>
+			<option value="1">
+				JPUBLISHED</option>
+			<option value="0">
+				JUNPUBLISHED</option>
+			<option value="2">
+				JARCHIVED</option>
+			<option value="-2">
+				JTRASHED</option>
+		</field>
+
+	</fieldset>
+	<fieldset name="publish"
+		label="COM_SOUTIENS_PUBLISHING_DETAILS"
+	>
+		
+		<field name="publish_up" type="calendar"
+			label="COM_SOUTIENS_FIELD_PUBLISH_UP_LABEL" description="COM_SOUTIENS_FIELD_PUBLISH_UP_DESC"
+			class="inputbox" format="%Y-%m-%d %H:%M:%S" size="22"
+			filter="user_utc" />
+
+		<field name="publish_down" type="calendar"
+			label="COM_SOUTIENS_SOUTIENPAIMTS_PUBLISH_DOWN" description="COM_SOUTIENS_SOUTIENPAIMTS_PUBLISH_DOWN"
+			class="inputbox" format="%Y-%m-%d %H:%M:%S" size="22"
+			filter="user_utc" />
+
+		<field name="ordering" type="text" label="JFIELD_ORDERING_LABEL"
+			description="JFIELD_ORDERING_DESC" class="inputbox" size="6"
+			default="0" labelclass="control-label" />
+
+		<field name="checked_out" type="hidden" filter="unset" />
+
+		<field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+</form>

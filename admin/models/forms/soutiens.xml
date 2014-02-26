@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details"
+		addfieldpath="/administrator/components/com_soutiens/models/fields"
+	>
+
+	</fieldset>
+	
+		<fieldset name="gestion"></fieldset>
+	<fieldset name="infotransac"
+		label="COM_SOUTIENS_PUBLISHING_DETAILS"
+	>
+	</fieldset>
+	
+		<fieldset name="exports">
+	</fieldset>
+	
+		<fieldset name="autresinfos">
+	</fieldset>
+
+</form>

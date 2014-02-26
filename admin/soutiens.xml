@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>com_soutiens</name>
+	<creationDate>August 07, 2013</creationDate>
+	<author>MiniHenk</author>
+	<authorEmail>minihenk@free.fr</authorEmail>
+	<authorUrl>www.minihenk.org</authorUrl>
+	<copyright>Copyright (C) 2013. All Rights Reserved</copyright>
+	<license>GNU/GPL Version 2 or later - http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<version>0.0.1</version>
+	<description><![CDATA[
+		<h1>Faire un don (v.0.0.1)</h1>
+		<div style="clear: both;"></div>
+		<p>Composant pour don en ligne par chèque et carte bancaire. <strong>Built for Joomla 3.1.</strong></p>
+		<p>Created by <a href="http://www.minihenk.org" target="_blank">MiniHenk | www.minihenk.org</a>
+	]]></description>
+
+	<!-- Runs on install; New in Joomla 1.5 -->
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<!-- Runs on uninstall; New in Joomla 1.5 -->
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+
+	<!-- Runs on install/uninstall/update; New in Joomla 2.5 -->
+	<scriptfile>script.php</scriptfile>
+
+	<!-- Update Schema; New in Joomla 2.5 -->
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql/</schemapath>
+		</schemas>
+	</update>
+
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>router.php</filename>
+		<filename>soutiens.php</filename>
+		<folder>assets</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+    <languages folder="site">
+        
+			<language tag="fr-FR">language/fr-FR.com_soutiens.ini</language>
+    </languages>
+
+	<administration>
+		<menu img="components/com_soutiens/assets/images/s_com_soutiens.png">COM_SOUTIENS_MENU</menu>
+		<submenu>
+			<!-- Instead of link you can specify individual link attributes -->
+			<menu option="com_soutiens" view="soutiens" img="components/com_soutiens/assets/images/icons/icon48inmenu-16x16.png">COM_SOUTIENS_MENU_SOUTIENS</menu>
+			<menu option="com_soutiens" view="soutienpaimts" img="components/com_soutiens/assets/images/icons/icon48inmenupaimt-16x16.png">COM_SOUTIENS_MENU_SOUTIENPAIMTS</menu>
+			
+		</submenu>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>soutiens.php</filename>
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+
+		<languages folder="admin">
+			<language tag="fr-FR">language/fr-FR.com_soutiens.ini</language>
+			<language tag="fr-FR">language/fr-FR.com_soutiens.sys.ini</language>
+		</languages>
+
+	</administration>
+</extension>

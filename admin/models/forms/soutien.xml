@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details"
+		addfieldpath="/administrator/components/com_soutiens/models/fields"
+	>
+		<field name="id" type="text" default="0"
+			readonly="true" class="readonly"
+			label="JGLOBAL_FIELD_ID_LABEL" 	description ="JGLOBAL_FIELD_ID_DESC" />
+
+		<field name="title" type="text" class="inputbox"
+			size="40" label="COM_SOUTIENS_FIELD_TITLE_LABEL"
+			description="COM_SOUTIENS_FIELD_TITLE_DESC" required="true" />
+	
+		<field name="alias" type="text" label="JFIELD_ALIAS_LABEL"
+			description="JFIELD_ALIAS_DESC" class="inputbox" size="45" labelclass="control-label" />
+	
+		<field
+			class="inputbox"
+			label="COM_SOUTIENS_FIELD_EMAILFOR_LABEL"
+			description="COM_SOUTIENS_FIELD_EMAILFOR_DESC" required="true"
+			name="emailfor"
+			size="40"
+			type="text"
+		/>
+		<field
+			class="inputbox"
+			label="COM_SOUTIENS_FIELD_NOMMAIL_LABEL"
+			description="COM_SOUTIENS_FIELD_NOMMAIL_DESC" required="true"
+			name="nommail"
+			size="40"
+			type="text"
+		/>
+		<field name="emailcopy" type="textarea" class="inputbox"
+			rows="5" cols="30" label="COM_SOUTIENS_FIELD_EMAILCOPY_LABEL"
+			description="COM_SOUTIENS_FIELD_EMAILCOPY_DESC" />
+		<field
+			class="inputbox"
+			label="COM_SOUTIENS_FIELD_SUBJECTMAIL_LABEL"
+			description="COM_SOUTIENS_FIELD_SUBJECTMAIL_DESC" required="true"
+			name="subjectmail"
+			size="40"
+			type="text"
+		/>
+		<field
+			default=""
+			label="COM_SOUTIENS_FIELD_INTROFORM_LABEL"
+			description="COM_SOUTIENS_FIELD_INTROFORM_DESC"
+			name="introform"
+			filter="safehtml"
+			width="300"
+			type="editor"
+		/>
+		
+		<field name="published" type="list" label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC" class="span12 small"
+			filter="intval" size="1" default="1"
+		>
+			<option value="1">
+				JPUBLISHED</option>
+			<option value="0">
+				JUNPUBLISHED</option>
+			<option value="2">
+				JARCHIVED</option>
+			<option value="-2">
+				JTRASHED</option>
+		</field>
+
+	</fieldset>
+
+	<fieldset name="publish"
+		label="COM_SOUTIENS_PUBLISHING_DETAILS"
+	>
+		
+		<field name="publish_up" type="calendar"
+			label="COM_SOUTIENS_FIELD_PUBLISH_UP_LABEL" description="COM_SOUTIENS_FIELD_PUBLISH_UP_DESC"
+			class="inputbox" format="%Y-%m-%d %H:%M:%S" size="22"
+			filter="user_utc" />
+
+		<field name="publish_down" type="calendar"
+			label="COM_BANNERS_FIELD_PUBLISH_DOWN_LABEL" description="COM_BANNERS_FIELD_PUBLISH_DOWN_DESC"
+			class="inputbox" format="%Y-%m-%d %H:%M:%S" size="22"
+			filter="user_utc" />
+
+		<field name="ordering" type="text" label="JFIELD_ORDERING_LABEL"
+			description="JFIELD_ORDERING_DESC" class="inputbox" size="6"
+			default="0" labelclass="control-label" />
+
+		<field name="checked_out" type="hidden" filter="unset" />
+
+		<field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+</form>
